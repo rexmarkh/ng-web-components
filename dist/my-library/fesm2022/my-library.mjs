@@ -192,20 +192,26 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "19.2.0", ngImpor
 
 class CardComponent {
     title = 'Card Title';
-    constructor() {
-    }
+    cardClick = new EventEmitter(); // ✅ Event Emitter
+    constructor() { }
     getCardTitle() {
         console.log('getCardTitle() :', this.title);
         return this.title;
     }
+    onCardClick() {
+        console.log('Card Clicked!');
+        this.cardClick.emit(this.title); // ✅ Emit event with title as payload
+    }
     static ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "19.2.0", ngImport: i0, type: CardComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "19.2.0", type: CardComponent, isStandalone: true, selector: "lib-card", inputs: { title: "title" }, ngImport: i0, template: "<div>\n    <div class=\"card\">\n        <div class=\"card-header\">\n        <h3>{{ title }}</h3>\n        </div>\n        <div class=\"card-body\">\n            <p>Card body</p>\n            <button (click)=\"getCardTitle()\" class=\"storybook-button\">Click me</button>\n        </div>\n        <div class=\"card-footer\">\n            <h4>Card Footer</h4>\n        </div>\n    </div>\n</div>", styles: [".card .card-header{background-color:#f5f5f5;padding:10px}.card .card-body{padding:10px}.card .card-footer{background-color:#f5f5f5;padding:10px}.storybook-button{display:inline-block;cursor:pointer;border:0;border-radius:3em;font-weight:700;line-height:1;font-family:Nunito Sans,Helvetica Neue,Helvetica,Arial,sans-serif}.storybook-button--primary{background-color:#555ab9;color:#fff}.storybook-button--secondary{box-shadow:#00000026 0 0 0 1px inset;background-color:transparent;color:#333}.storybook-button--small{padding:10px 16px;font-size:12px}.storybook-button--medium{padding:11px 20px;font-size:14px}.storybook-button--large{padding:12px 24px;font-size:16px}\n"] });
+    static ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "19.2.0", type: CardComponent, isStandalone: true, selector: "lib-card", inputs: { title: "title" }, outputs: { cardClick: "cardClick" }, ngImport: i0, template: "<div>\n    <div class=\"card\">\n        <div class=\"card-header\">\n        <h3>{{ title }}</h3>\n        </div>\n        <div class=\"card-body\">\n            <p>Card body</p>\n            <button (click)=\"onCardClick()\" class=\"storybook-button\">Click me</button>\n        </div>\n        <div class=\"card-footer\">\n            <h4>Card Footer</h4>\n        </div>\n    </div>\n</div>", styles: [".card .card-header{background-color:#f5f5f5;padding:10px}.card .card-body{padding:10px}.card .card-footer{background-color:#f5f5f5;padding:10px}.storybook-button{display:inline-block;cursor:pointer;border:0;border-radius:3em;font-weight:700;line-height:1;font-family:Nunito Sans,Helvetica Neue,Helvetica,Arial,sans-serif}.storybook-button--primary{background-color:#555ab9;color:#fff}.storybook-button--secondary{box-shadow:#00000026 0 0 0 1px inset;background-color:transparent;color:#333}.storybook-button--small{padding:10px 16px;font-size:12px}.storybook-button--medium{padding:11px 20px;font-size:14px}.storybook-button--large{padding:12px 24px;font-size:16px}\n"] });
 }
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "19.2.0", ngImport: i0, type: CardComponent, decorators: [{
             type: Component,
-            args: [{ selector: 'lib-card', standalone: true, template: "<div>\n    <div class=\"card\">\n        <div class=\"card-header\">\n        <h3>{{ title }}</h3>\n        </div>\n        <div class=\"card-body\">\n            <p>Card body</p>\n            <button (click)=\"getCardTitle()\" class=\"storybook-button\">Click me</button>\n        </div>\n        <div class=\"card-footer\">\n            <h4>Card Footer</h4>\n        </div>\n    </div>\n</div>", styles: [".card .card-header{background-color:#f5f5f5;padding:10px}.card .card-body{padding:10px}.card .card-footer{background-color:#f5f5f5;padding:10px}.storybook-button{display:inline-block;cursor:pointer;border:0;border-radius:3em;font-weight:700;line-height:1;font-family:Nunito Sans,Helvetica Neue,Helvetica,Arial,sans-serif}.storybook-button--primary{background-color:#555ab9;color:#fff}.storybook-button--secondary{box-shadow:#00000026 0 0 0 1px inset;background-color:transparent;color:#333}.storybook-button--small{padding:10px 16px;font-size:12px}.storybook-button--medium{padding:11px 20px;font-size:14px}.storybook-button--large{padding:12px 24px;font-size:16px}\n"] }]
+            args: [{ selector: 'lib-card', standalone: true, template: "<div>\n    <div class=\"card\">\n        <div class=\"card-header\">\n        <h3>{{ title }}</h3>\n        </div>\n        <div class=\"card-body\">\n            <p>Card body</p>\n            <button (click)=\"onCardClick()\" class=\"storybook-button\">Click me</button>\n        </div>\n        <div class=\"card-footer\">\n            <h4>Card Footer</h4>\n        </div>\n    </div>\n</div>", styles: [".card .card-header{background-color:#f5f5f5;padding:10px}.card .card-body{padding:10px}.card .card-footer{background-color:#f5f5f5;padding:10px}.storybook-button{display:inline-block;cursor:pointer;border:0;border-radius:3em;font-weight:700;line-height:1;font-family:Nunito Sans,Helvetica Neue,Helvetica,Arial,sans-serif}.storybook-button--primary{background-color:#555ab9;color:#fff}.storybook-button--secondary{box-shadow:#00000026 0 0 0 1px inset;background-color:transparent;color:#333}.storybook-button--small{padding:10px 16px;font-size:12px}.storybook-button--medium{padding:11px 20px;font-size:14px}.storybook-button--large{padding:12px 24px;font-size:16px}\n"] }]
         }], ctorParameters: () => [], propDecorators: { title: [{
                 type: Input
+            }], cardClick: [{
+                type: Output
             }] } });
 
 class DropdownComponent {

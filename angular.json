@@ -97,7 +97,7 @@
               {
                 "glob": "**/*",
                 "input": "projects/my-web-components/public",
-                "output": "./"
+                "output": "./assets"
               },
               {
                 "glob": "package.json",
