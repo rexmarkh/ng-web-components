@@ -1,0 +1,9 @@
+{
+    "name": "@learnship/my-web-components",
+    "version": "1.0.0",
+    "main": "index.js",
+    "module": "main.js",
+    "types": "index.d.ts",
+    "sideEffects": true
+  }
+  
