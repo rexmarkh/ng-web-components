@@ -158,7 +158,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    title: 'Storybook Title', // ✅ Editable in Storybook UI\n    getCardTitle() {\n      const result = this.title ?? 'Default Title'; // ✅ Always return a valid string\n      action('getCardTitle called!')({ result }); // ✅ Log in Storybook Actions\n      return result; // ✅ Ensure it's always a string\n    },\n  },\n}"
+                "defaultValue": "{\n  args: {\n    title: 'Hello World..!!', // ✅ Editable in Storybook UI\n    getCardTitle() {\n      const result = this.title ?? 'Default Title'; // ✅ Always return a valid string\n      action('getCardTitle called!')({ result }); // ✅ Log in Storybook Actions\n      return result; // ✅ Ensure it's always a string\n    },\n  },\n}"
             }
         ],
         "functions": [],
@@ -355,7 +355,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\n  args: {\n    title: 'Storybook Title', // ✅ Editable in Storybook UI\n    getCardTitle() {\n      const result = this.title ?? 'Default Title'; // ✅ Always return a valid string\n      action('getCardTitle called!')({ result }); // ✅ Log in Storybook Actions\n      return result; // ✅ Ensure it's always a string\n    },\n  },\n}"
+                    "defaultValue": "{\n  args: {\n    title: 'Hello World..!!', // ✅ Editable in Storybook UI\n    getCardTitle() {\n      const result = this.title ?? 'Default Title'; // ✅ Always return a valid string\n      action('getCardTitle called!')({ result }); // ✅ Log in Storybook Actions\n      return result; // ✅ Ensure it's always a string\n    },\n  },\n}"
                 }
             ],
             "projects/my-library/.storybook/preview.ts": [

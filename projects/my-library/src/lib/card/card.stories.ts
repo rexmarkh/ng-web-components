@@ -26,7 +26,7 @@ type Story = StoryObj<CardComponent>;
 
 export const Title: Story = {
   args: {
-    title: 'Storybook Title', // ✅ Editable in Storybook UI
+    title: 'Hello World..!!', // ✅ Editable in Storybook UI
     getCardTitle() {
       const result = this.title ?? 'Default Title'; // ✅ Always return a valid string
       action('getCardTitle called!')({ result }); // ✅ Log in Storybook Actions
