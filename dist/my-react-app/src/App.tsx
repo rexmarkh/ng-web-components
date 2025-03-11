@@ -2,14 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-
 import '@learnship/my-web-components/index';
-import { CardComponent } from '@learnship/my-web-components';
 
 function App() {
-  let card: any = new CardComponent();
-  console.log(card);
-
   const cardRef = useRef(null);
 
   useEffect(() => {
